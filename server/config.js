@@ -348,7 +348,7 @@ module.exports = {
     clan_wars: false,
     diep: false,
     domination: false,
-    growth: false,
+    growth: true,
     groups: false,
     march_madness: false,
     mode: 'ffa',
