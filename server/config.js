@@ -2,10 +2,10 @@ module.exports = {
     // Development
     dev_build: true, // Whether this version is unstable and should be clearly marked as such.
 
-    // Client
-    main_menu: 'index.html', // Where the main menu is located (in the /public folder).
-    host: 'localhost:3000', // Game server domain. If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    port: 3000, // Which port to run the web server on.
+   // Client
+    main_menu: 'index.html',
+    host: process.env.RENDER_EXTERNAL_HOSTNAME,
+    port: process.env.PORT || 3000,
 
     // Server
     visible_list_interval: 250, // How often to update the list of the entities that players can see. Has effects of when entities are activated.
@@ -14,13 +14,14 @@ module.exports = {
 
     servers: [ // Make sure to change the host, port and id between servers!
         {
-            share_client_server: false, // Only one server at a time can have this enabled.
+            share_client_server: true, // Only one server at a time can have this enabled.
             // The above is required if your VM (the machine that hosts the website stuff) doesn't support multi-ports and forces everything through the main server.
             // This also overrides the below host and port settings to be identical to the main server's host/port (by default, 3000).
 
-            host: 'localhost:3001', // Server host location.
-            port: 3001, // The port on the server.
-            id: 'la', // (<host>/#<id>)
+            host: process.env.RENDER_EXTERNAL_HOSTNAME,
+            port: process.env.PORT || 3000,
+
+            id: 'la',
 
             region: "Local", // The region the server is on.
             gamemode: ['ffa'], // The selected gamemode.
