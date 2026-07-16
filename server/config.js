@@ -32,7 +32,7 @@ module.exports = {
             private: false, // Whether the server requires a privileged token to join (except through server travel).
 
             properties: { // This overrides settings in the config.js file, assuming the selected gamemode doesn't also override it.
-                bot_cap: 20,
+                bot_cap: 2,
                 daily_tank: {
                     tank: 'whirlwind',
                     tier: 3,
