@@ -5660,7 +5660,7 @@ addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
         addUpgrades('tornado', 3, ['megaTornado', 'tempest', 'thunderbolt']);
         addUpgrades('hurricane', 3, ['typhoon', 'blizzard']);
 
-    addUpgrades('auraBasic', 2, [
+    addUpgrades('auraBasic', 1, [
         'atmosphereBasic',
         'studentBasic'
     ]);
