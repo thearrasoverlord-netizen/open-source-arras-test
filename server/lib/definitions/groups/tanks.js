@@ -116,22 +116,6 @@ Class.atmosphereBasic = {
     ]
 };
 
-Class.healerAuraBasic = {
-    PARENT: "auraBasic",
-    LABEL: "Healer Aura Basic",
-    DANGER: 6,
-
-    TURRETS: [
-        {
-            TYPE: "healerAura_dreadsV2",
-            POSITION: {
-                SIZE: 60,
-                ARC: 360,
-                LAYER: 2
-            }
-        }
-    ]
-};
 // Tier 1 (Level 15)
 
 Class.desmos = {
@@ -5579,7 +5563,7 @@ Class.worstTank = {
 
 // Class Tree
 // FORMATTED ARRAY OF UPGRADES DONT FORGET!!!: ['twin', 'sniper', 'machineGun', 'flankGuard', 'director', 'pounder', 'trapper', 'desmos', 'testTank']
-addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic', 'atmosphereBasic', 'healerAuraBasic']);
+addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic', 'atmosphereBasic']);
     addUpgrades('basic', 2, ['smasher']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
