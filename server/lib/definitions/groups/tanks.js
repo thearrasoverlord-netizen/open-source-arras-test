@@ -64,6 +64,11 @@ Class.auraBasic = {
     LABEL: "Aura Basic",
     DANGER: 5,
 
+    UPGRADES_TIER_1: [
+        'atmosphereBasic',
+        'studentBasic'
+    ],
+    
     GUNS: [
         {
             POSITION: {
