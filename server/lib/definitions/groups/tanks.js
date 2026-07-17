@@ -5589,7 +5589,7 @@ Class.worstTank = {
 
 // Class Tree
 // FORMATTED ARRAY OF UPGRADES DONT FORGET!!!: ['twin', 'sniper', 'machineGun', 'flankGuard', 'director', 'pounder', 'trapper', 'desmos', 'testTank']
-addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
+addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic', 'atmosphereBasic', 'studentBasic']);
     addUpgrades('basic', 2, ['smasher']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
