@@ -116,29 +116,21 @@ Class.atmosphereBasic = {
     ]
 };
 
-Class.healerAura = {
-    PARENT: "genericTank",
-
-    SHAPE: 0,
-    COLOR: 11,
-    ALPHA: 0.25,
-
-    BODY: {
-        DAMAGE: 0,
-        HEALTH: 10000,
-        SPEED: 0
-    }
-};
-
 Class.healerAuraBasic = {
     PARENT: "auraBasic",
     LABEL: "Healer Aura Basic",
     DANGER: 6,
 
+    BODY: healerBodyStats[0],
+
     TURRETS: [
         {
-            POSITION: [60, 0, 0, 0, 360],
-            TYPE: "healerAura"
+            TYPE: "healerAura_dreadsV2",
+            POSITION: {
+                SIZE: 60,
+                ARC: 360,
+                LAYER: 2
+            }
         }
     ]
 };
