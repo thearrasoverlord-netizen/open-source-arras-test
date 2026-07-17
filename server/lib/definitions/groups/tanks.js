@@ -84,7 +84,61 @@ Class.auraBasic = {
         }
     ]
 };
+
+Class.atmosphereAura = {
+    PARENT: "basicAura",
+
+    COLOR: 12,
+    ALPHA: 0.25,
+
+    BODY: {
+        DAMAGE: 3,
+        HEALTH: 10000,
+        SPEED: 0
+    }
+};
+
+Class.atmosphereBasic = {
+    PARENT: "auraBasic",
+    LABEL: "Atmosphere-Basic",
+    DANGER: 6,
+
+    TURRETS: [
+        {
+            POSITION: [80, 0, 0, 0, 360],
+            TYPE: "atmosphereAura"
+        }
+    ]
+};
+
+Class.studentAura = {
+    PARENT: "basicAura",
+
+    COLOR: 15,
+    ALPHA: 0.25,
+
+    BODY: {
+        DAMAGE: 0,
+        HEALTH: 10000,
+        SPEED: 0
+    }
+};
+
+Class.studentBasic = {
+    PARENT: "auraBasic",
+    LABEL: "Student-Basic",
+    DANGER: 6,
+
+    TURRETS: [
+        {
+            POSITION: [60, 0, 0, 0, 360],
+            TYPE: "studentAura"
+        }
+    ]
+};
+
 // Tier 1 (Level 15)
+
 Class.desmos = {
     PARENT: 'genericTank',
     LABEL: "Desmos",
@@ -5605,6 +5659,13 @@ addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
         addUpgrades('whirlwind', 3, ['hexaWhirl', 'munition', 'whirl3', 'whirlGuard', 'prophet', 'vortex']);
         addUpgrades('tornado', 3, ['megaTornado', 'tempest', 'thunderbolt']);
         addUpgrades('hurricane', 3, ['typhoon', 'blizzard']);
+
+    addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
+
+    addUpgrades('auraBasic', 2, [
+        'atmosphereBasic',
+        'studentBasic'
+    ]);
 
 if (Config.arms_race || Config.retrograde) {
     addUpgrades('assassin', 3, ['buttbuttin']);
