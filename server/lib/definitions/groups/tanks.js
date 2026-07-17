@@ -44,6 +44,46 @@ Class.testTank = {
         }
     ]
 };
+
+Class.basicAura = {
+    PARENT: "genericTank",
+
+    SHAPE: 0,
+    COLOR: 12,
+    ALPHA: 0.25,
+
+    BODY: {
+        DAMAGE: 2,
+        HEALTH: 10000,
+        SPEED: 0
+    }
+};
+
+Class.auraBasic = {
+    PARENT: "genericTank",
+    LABEL: "Aura Basic",
+    DANGER: 5,
+
+    GUNS: [
+        {
+            POSITION: {
+                LENGTH: 18,
+                WIDTH: 8
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet"
+            }
+        }
+    ],
+
+    TURRETS: [
+        {
+            POSITION: [40, 0, 0, 0, 360],
+            TYPE: "basicAura"
+        }
+    ]
+};
 // Tier 1 (Level 15)
 Class.desmos = {
     PARENT: 'genericTank',
@@ -5490,7 +5530,7 @@ Class.worstTank = {
 
 // Class Tree
 // FORMATTED ARRAY OF UPGRADES DONT FORGET!!!: ['twin', 'sniper', 'machineGun', 'flankGuard', 'director', 'pounder', 'trapper', 'desmos', 'testTank']
-addUpgrades('basic', 1, ['twin', 'testTank']);
+addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
     addUpgrades('basic', 2, ['smasher']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
