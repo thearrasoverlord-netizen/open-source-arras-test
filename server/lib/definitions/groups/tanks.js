@@ -121,8 +121,6 @@ Class.healerAuraBasic = {
     LABEL: "Healer Aura Basic",
     DANGER: 6,
 
-    BODY: healerBodyStats[0],
-
     TURRETS: [
         {
             TYPE: "healerAura_dreadsV2",
