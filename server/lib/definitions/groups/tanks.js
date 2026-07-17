@@ -22,6 +22,28 @@ Class.basic = {
     ]
 };
 
+Class.testTank = {
+    PARENT: 'genericTank',
+    LABEL: "Test Tank",
+    COLOR: 10, // Azul
+    DANGER: 5,
+    GUNS: [
+        {
+            POSITION: {
+                LENGTH: 24,
+                WIDTH: 10
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([
+                    g.basic,
+                    g.twin,
+                    g.machineGun
+                ]),
+                TYPE: 'bullet'
+            }
+        }
+    ]
+};
 // Tier 1 (Level 15)
 Class.desmos = {
     PARENT: 'genericTank',
@@ -5467,7 +5489,7 @@ Class.worstTank = {
 };
 
 // Class Tree
-addUpgrades('basic', 1, ['twin', 'sniper', 'machineGun', 'flankGuard', 'director', 'pounder', 'trapper', 'desmos']);
+addUpgrades('basic', 1, ['twin', 'sniper', 'machineGun', 'flankGuard', 'director', 'pounder', 'trapper', 'desmos', 'testTank']);
     addUpgrades('basic', 2, ['smasher']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
