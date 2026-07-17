@@ -5589,6 +5589,11 @@ addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
 
+    addUpgrades('auraBasic', 1, [
+        'atmosphereBasic',
+        'studentBasic'
+    ]);
+
     addUpgrades('twin', 2, ['doubleTwin', 'tripleShot', 'gunner', 'hexaTank', 'helix']);
         addUpgrades('twin', 3, ['dual', 'bulwark', 'musket']);
         addUpgrades('doubleTwin', 3, ['tripleTwin', 'hewnDouble', 'autoDouble', 'bentDouble']);
@@ -5660,10 +5665,7 @@ addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
         addUpgrades('tornado', 3, ['megaTornado', 'tempest', 'thunderbolt']);
         addUpgrades('hurricane', 3, ['typhoon', 'blizzard']);
 
-    addUpgrades('auraBasic', 1, [
-        'atmosphereBasic',
-        'studentBasic'
-    ]);
+
 
 if (Config.arms_race || Config.retrograde) {
     addUpgrades('assassin', 3, ['buttbuttin']);
