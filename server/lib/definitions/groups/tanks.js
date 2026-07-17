@@ -5589,10 +5589,7 @@ addUpgrades('basic', 1, ['twin', 'testTank', 'auraBasic']);
         addUpgrades('smasher', 3, ['megaSmasher', 'spike', 'autoSmasher', 'landmine']);
         addUpgrades('healer', 3, ['medic', 'ambulance', 'surgeon', 'paramedic']);
 
-    addUpgrades('auraBasic', 1, [
-        'atmosphereBasic',
-        'studentBasic'
-    ]);
+    addUpgrades('auraBasic', 1, ['auraBasic']);
 
     addUpgrades('twin', 2, ['doubleTwin', 'tripleShot', 'gunner', 'hexaTank', 'helix']);
         addUpgrades('twin', 3, ['dual', 'bulwark', 'musket']);
